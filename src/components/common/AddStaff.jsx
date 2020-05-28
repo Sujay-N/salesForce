@@ -5,6 +5,8 @@ import uuid from 'uuid-random';
 
 import { addStaff } from '../../redux/actions';
 
+import  Navbar  from './Navbar';
+
 class AddStaff extends Component {
 	constructor(props) {
 		super(props);
@@ -54,6 +56,7 @@ class AddStaff extends Component {
 	render() {
 		return (
 			<div>
+			<Navbar/>
 				<h2 className="text-info text-center my-3">Add New Staff Details</h2>
 
 				<div className="col-4 offset-4">

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { delStaff,setPerPg } from '../../redux/actions';
 
-import Pagination from "../common/Pagination"
+import Pagination from "../common/Pagination";
+
+import  Navbar  from './Navbar';
 
 export class ViewStaff extends Component {
 	constructor(props) {
@@ -50,6 +52,7 @@ export class ViewStaff extends Component {
 
 		return (
 			<div>
+			<Navbar/>
 				<div className="container">
 					<div className="col-8 offset-2">
 
