@@ -47,10 +47,7 @@ const initialState = {
         { name: "Yankee", email: "y@gmail.com", mob: 9876543210, sales: 8000, key: uuid() },
         { name: "Zeus", email: "z@gmail.com", mob: 9876543210, sales: 9000, key: uuid() },
     ],
-    // page: 1,
-    // perPage: 10,
-    // length: 0,
-    // totalPages: 0,
+  
     currentPage: 1,
     perPage: 5
 
@@ -66,10 +63,6 @@ export default (state = initialState, action) => {
             staffData: [...state.staffData, action.payload]
         }
 
-
-        // case EDIT_STAFF:
-        // return { ...state, ...payload }
-
       
         case DELETE_STAFF:
             return {
@@ -77,11 +70,7 @@ export default (state = initialState, action) => {
                 staffData: state.staffData.filter((ele) => ele.key !== action.payload)
             }
 
-        //     case CHANGE_PAGE_NO:
-        // return {
-        //   ...state,
-        //   page: payload
-        // }
+    
 
         case SET_PER_PAGE:
             return {
@@ -95,21 +84,7 @@ export default (state = initialState, action) => {
             }
 
 
-        // case SET_CURR_PAGE:
-        // return { ...state, ...payload }
-
-
-        // case SET_PER_PAGE:
-        // return { ...state, ...payload }
-
-        // case typeName:
-        // return { ...state, ...payload }
-
-        // case typeName:
-        // return { ...state, ...payload }
-
-        // case typeName:
-        // return { ...state, ...payload }
+       
 
 
 

@@ -15,7 +15,10 @@ class AddStaff extends Component {
 			email: '',
 			mob: 0,
 			sales: 0,
-			key: uuid()
+			key: uuid(),
+			nameError:"",
+			emailError:"",
+			mobileError:""
 		};
 	}
 
@@ -29,28 +32,70 @@ class AddStaff extends Component {
 		});
 	};
 
+
+	validate = () => {
+
+		// let emailError=""
+		// if(!this.state.email.includes("@"))
+		// {
+		// 	emailError = "Invalid Email"
+		// }
+		
+
+		let nameError=""
+		if(!this.state.name)
+		{
+			nameError="Invalid Name"
+		}
+		let mobileError=""
+		if(this.state.mob < 10)
+		{
+			mobileError="Invalid Mobile Number"
+		}
+
+		if( nameError || mobileError)
+		{
+			this.setState({nameError,mobileError});
+			return false;
+		}
+
+
+
+
+
+		return true;
+
+	}
+
 	handleSubmit = (e) => {
 		e.preventDefault();
-		const staffDetails = {
-			name: this.state.name,
-			email: this.state.email,
-			mob: this.state.mob,
-			sales: this.state.sales,
-			key: this.state.key
-		};
-		console.log(staffDetails);
-		console.log(this.props.addStaff);
-		this.props.addStaff(staffDetails);
 
-		this.setState({
-			...this.state,
-			name: '',
-			email: '',
-			mob: '',
-			sales: 0
-		});
+		const isValid = this.validate();
 
-		alert('Success');
+		if(isValid)
+		{
+			const staffDetails = {
+				name: this.state.name,
+				email: this.state.email,
+				mob: this.state.mob,
+				sales: this.state.sales,
+				key: this.state.key
+			};
+			console.log(staffDetails);
+			console.log(this.props.addStaff);
+			this.props.addStaff(staffDetails);
+	
+			this.setState({
+				...this.state,
+				name: '',
+				email: '',
+				mob: '',
+				sales: 0
+			});
+	
+			alert('Success');
+		}
+		
 	};
 
 	render() {
@@ -72,7 +117,7 @@ class AddStaff extends Component {
 								value={this.state.name}
 							/>
 						</label>
-
+							<div style= {{color:"red"}}>{this.state.nameError}</div>
 						<label>
 							Email ID:
 							<input
@@ -84,7 +129,7 @@ class AddStaff extends Component {
 								value={this.state.email}
 							/>
 						</label>
-
+						<div style= {{color:"red"}}>{this.state.emailError}</div>
 						<label>
 							Mobile:
 							<input
@@ -96,7 +141,7 @@ class AddStaff extends Component {
 								value={this.state.mob}
 							/>
 						</label>
-
+						<div style= {{color:"red"}}>{this.state.mobileError}</div>
 						<label >
 							Sales FY:
 							<input
