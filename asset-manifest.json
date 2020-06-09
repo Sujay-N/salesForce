@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/salesForce/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/salesForce/static/js/main.dd826382.chunk.js",
+    "main.js.map": "/salesForce/static/js/main.dd826382.chunk.js.map",
+    "runtime-main.js": "/salesForce/static/js/runtime-main.127830fc.js",
+    "runtime-main.js.map": "/salesForce/static/js/runtime-main.127830fc.js.map",
+    "static/js/2.17c6052d.chunk.js": "/salesForce/static/js/2.17c6052d.chunk.js",
+    "static/js/2.17c6052d.chunk.js.map": "/salesForce/static/js/2.17c6052d.chunk.js.map",
+    "index.html": "/salesForce/index.html",
+    "precache-manifest.4a6f8e755778e2544000a54d903c1397.js": "/salesForce/precache-manifest.4a6f8e755778e2544000a54d903c1397.js",
+    "service-worker.js": "/salesForce/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/salesForce/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.17c6052d.chunk.js.LICENSE.txt": "/salesForce/static/js/2.17c6052d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.127830fc.js",
+    "static/js/2.17c6052d.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.dd826382.chunk.js"
+  ]
+}
